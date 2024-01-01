@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Mini Stack</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>facebook</h1>
+        <p>2006 FB statuses but by gENz</p>
+        <nav class="nav-bar">
+            <a href="#">home</a>
+            <a href="#">search</a>
+            <a href="#">browse</a>
+            <a href="#">invite</a>
+            <a href="#">logout</a>
+        </nav>
+    </header>
+
+    <main>
+      <container class="left-bar">
+        <nav>
+          <a href="#">My Profile</a>
+          <a href="#">My Friends</a>
+          <a href="#">My Photos</a>
+          <a href="#">My Notes</a>
+          <a href="#">My Shares</a>
+          <a href="#">My Groups</a>
+          <a href="#">My Events</a>
+          <a href="#">My Messages</a>
+          <a href="#">My Account</a>
+          <a href="#">My Privacy</a>
+        </nav>
+      </container>
+      
+      <container class="main-column">
+        <form id="statusForm">
+          <label>Username</label>
+          <input name="username" placeholder="Username" />
+          <label>Status</label>
+          <textarea name="status" placeholder="what's on your mind?"></textarea>
+          <button>Share</button>
+        </form>
+        
+        <div class="newsfeed">
+          <h2>news feed</h2>
+          <div id="feed"></div>
+        </div>
+    </container>
+      
+
+    <container class="right-bar">
+      <p style="font-weight:bold;">right side bar</p>
+      <p>there's meant to be content here</p>
+      <p>like friend requests</p>
+      <p>but here's the inspo pic for this page instead</p>
+      <p>this was what the newsfeed looked like in 2006</p>
+      <img src="https://compote.slate.com/images/802a9c9c-308e-4986-8758-1d668fa15535.jpg">
+    </container>
+
+
+    </main> 
+
+  </body>
+</html>
