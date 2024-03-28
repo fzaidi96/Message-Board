@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.listen(8080, function () {
-  console.log("server is running in port 8080!");
+  console.log("Server listening at http://localhost:8080");
 });
 
 import Database from "better-sqlite3";
@@ -25,10 +25,6 @@ app.post("/statuses", function (request, response) {
   const newStatus = db.prepare(`INSERT INTO FBforGenz (username, status) VALUES (?,?)`).run(username, status);
     response.json(newStatus);
 });
-
-
-
-
 
 //deletes a status from the database 
 app.delete("/statuses/:id", function (request, response) {

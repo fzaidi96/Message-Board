@@ -6,14 +6,14 @@ async function displayFeed() {
   const post = await response.json();
   const feed = document.getElementById("feed");
 
-// for each post in the data base, we create the username, status and delete button
+// for each post in the data base, we create elements for username, status and delete button
 
   post.forEach(function (post) {
     const h6 = document.createElement("h6");
     const p = document.createElement("p");
     const deleteButton = document.createElement("button");
 
-  // then populate them with the data for username, status from database
+  // then populate these elements with the data matching username, status from database
     h6.textContent = post.username;
     p.textContent = post.status;
     deleteButton.textContent = "x";
