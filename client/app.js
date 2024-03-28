@@ -2,7 +2,7 @@ const form = document.getElementById("statusForm");
 
  // this function gets all the statuses from our Database via our API and renders them on the page
 async function displayFeed() {
-  const response = await fetch("https://fz-fb-server.onrender.com/statuses");
+  const response = await fetch("https://fz-fb-server.onrender.com/");
   const post = await response.json();
   const feed = document.getElementById("feed");
 
@@ -40,7 +40,7 @@ form.addEventListener("submit", async function (event) {
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
 
-  const response = await fetch("https://fz-fb-server.onrender.com",{
+  const response = await fetch("https://fz-fb-server.onrender.com/statuses",{
     method: "POST",
     headers: {
       "Content-Type": "application/json"
