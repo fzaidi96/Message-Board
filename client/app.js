@@ -2,7 +2,7 @@ const form = document.getElementById("statusForm");
 
  // this function gets all the statuses from our Database via our API and renders them on the page
 async function displayFeed() {
-  const response = await fetch("http://localhost:8080/statuses");
+  const response = await fetch("https://fz-fb-server.onrender.com/statuses");
   const post = await response.json();
   const feed = document.getElementById("feed");
 
@@ -40,7 +40,7 @@ form.addEventListener("submit", async function (event) {
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData);
 
-  const response = await fetch("http://localhost:8080/statuses",{
+  const response = await fetch("https://fz-fb-server.onrender.com",{
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -59,7 +59,7 @@ form.addEventListener("submit", async function (event) {
 
 // this function will delete statuses from the feed
 async function deletePost(postId) {
-    const response = await fetch(`http://localhost:8080/statuses/${postId}`, { 
+    const response = await fetch(`https://fz-fb-server.onrender.com/statuses/${postId}`, { 
       method: "DELETE",
     });
 
