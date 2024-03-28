@@ -12,7 +12,7 @@ import Database from "better-sqlite3";
 const db = new Database("database.db");
 
 
-app.get("https://fz-fb-server.onrender.com/", function (request, response) {
+app.get("https://fz-fb-server.onrender.com/statuses", function (request, response) {
   const statuses = db.prepare("SELECT * FROM FBforGenz").all();
     response.json(statuses);
 });
